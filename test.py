@@ -16,254 +16,7 @@ line4 = ""
 line5 = ""
 line6 = ""
 
-def firstnote(note):
-    #note = raw_input("Enter note: ")
-    if(note == "E2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|0-"
-    if(note == "F2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|1-"
-    if(note == "F#2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|2-"
-    if(note == "G2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|3-"
-    if(note == "G#2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|4-"
-    if(note == "A2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|0-"
-        line6 += "E|--"
-    if(note == "A#2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|1-"
-        line6 += "E|--"
-    if(note == "B2"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|2-"
-        line6 += "E|--"
-    if(note == "C3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|3-"
-        line6 += "E|--"
-    if(note == "C#3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|4-"
-        line6 += "E|--"
-    if(note == "D3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|0-"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "D#3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|1-"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "E3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|2-"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "F3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|3-"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "F#3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|4-"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "G3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|0-"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "G#3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|1-"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "A3"):
-        line1 = line1 + "e|--"
-        line2 += "B|--"
-        line3 += "G|2-"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "A#3"):
-        line1 += "e|--"
-        line2 += "B|--"
-        line3 += "G|3-"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "B3"):
-        line1 += "e|--"
-        line2 += "B|0-"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "C4"):
-        line1 += "e|--"
-        line2 += "B|1-"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "C#4"):
-        line1 += "e|--"
-        line2 += "B|2-"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "D4"):
-        line1 += "e|--"
-        line2 += "B|3-"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "D#4"):
-        line1 += "e|--"
-        line2 += "B|4-"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "E4"):
-        line1 += "e|0-"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "F4"):
-        line1 += "e|1-"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "F#4"):
-        line1 += "e|2-"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "G4"):
-        line1 += "e|3-"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "G#4"):
-        line1 += "e|4-"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "A4"):
-        line1 += "e|5-"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "A#4"):
-        line1 += "e|6-"
-        line2 += "B|--"
-        line3 += "G|--"
-        line4 += "D|--"
-        line5 += "A|--"
-        line6 += "E|--"
-    if(note == "custom"):
-        cline1 = input("Tab for e:")
-        cline2 = input("Tab for B:")
-        cline3 = input("Tab for G:")
-        cline4 = input("Tab for D:")
-        cline5 = input("Tab for A:")
-        cline6 = input("Tab for E:")
-        line1 += cline1
-        line2 += cline2
-        line3 += cline3
-        line4 += cline4
-        line5 += cline5
-        line6 += cline6
-    if(note == "exit"):
-        print(line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n" + line6)
-        fn = "tab.txt"
-        target = open(fn, "w")
-        target.write(line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n" + line6)
-        return
-    #notes()
-
 def notes(note):
-    global line1
-    global line2
-    global line3
-    global line4
-    global line5
-    global line6
-    #note = raw_input("Enter note: ")
     if(note == "E2"):
         line1 += "--"
         line2 += "--"
@@ -607,24 +360,24 @@ def notes(note):
         line4 += "---"
         line5 += "---"
         line6 += "---"
-    if(note == "custom"):
-        cline1 = input("Tab for e:")
-        cline2 = input("Tab for B:")
-        cline3 = input("Tab for G:")
-        cline4 = input("Tab for D:")
-        cline5 = input("Tab for A:")
-        cline6 = input("Tab for E:")
-        line1 += cline1
-        line2 += cline2
-        line3 += cline3
-        line4 += cline4
-        line5 += cline5
-        line6 += cline6
+#    if(note == "custom"):
+#        cline1 = input("Tab for e:")
+#        cline2 = input("Tab for B:")
+#        cline3 = input("Tab for G:")
+#        cline4 = input("Tab for D:")
+#        cline5 = input("Tab for A:")
+#        cline6 = input("Tab for E:")
+#        line1 += cline1
+#        line2 += cline2
+#        line3 += cline3
+#        line4 += cline4
+#        line5 += cline5
+#        line6 += cline6
     if(note == "exit"):
-        print(line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n" + line6)
+        print("e|" + line1 + "\n" + "B|" + line2 + "\n" + "G|" + line3 + "\n" + "D|" + line4 + "\n" + "A|" + line5 + "\n" + "E|" + line6)
         fn = "tab.txt"
         target = open(fn, "w")
-        target.write(line1 + "\n" + line2 + "\n" + line3 + "\n" + line4 + "\n" + line5 + "\n" + line6)
+        target.write("e|" + line1 + "\n" + "B|" + line2 + "\n" + "G|" + line3 + "\n" + "D|" + line4 + "\n" + "A|" + line5 + "\n" + "E|" + line6)
         return
     #notes()
 
@@ -635,7 +388,7 @@ def notes(note):
 
 #firstnote("A3")
 
-letter = ""
+#letter = ""
 
 #########Forty lines of code I used from an already existing program and edited it to fit my project
  ## https://mzucker.github.io/2016/08/07/ukulele-tuner.html  
@@ -699,6 +452,6 @@ while time.time() < t_end:     ##make program end
     if num_frames >= FRAMES_PER_FFT:
         print("freq: {:7.2f} Hz     note: {:>3s} {:+.2f}".format(freq, note_name(noteNumWhole), noteNum-noteNumWhole))
         notes(note_name(noteNumWhole))
-        letter += note_name(noteNumWhole)
-        letter += " "
+        #letter += note_name(noteNumWhole)
+        #letter += " "
 notes("exit")
