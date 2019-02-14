@@ -379,22 +379,13 @@ def notes(note):
         target = open(fn, "w")
         target.write("e|" + line1 + "\n" + "B|" + line2 + "\n" + "G|" + line3 + "\n" + "D|" + line4 + "\n" + "A|" + line5 + "\n" + "E|" + line6)
         return
-    #notes()
 
-#firstnote()
+## Forty lines of code I used from an already existing program and edited it to fit my project
+## https://github.com/mzucker/python-tuner (technically copyright infringement since there's no license)
+## Has been modified to fit this application
 
-
-
-
-#firstnote("A3")
-
-#letter = ""
-
-#########Forty lines of code I used from an already existing program and edited it to fit my project
- ## https://mzucker.github.io/2016/08/07/ukulele-tuner.html  
-
-NOTE_MIN = 40       ## not C4  anymore ###########Try to fix
-NOTE_MAX = 120      # nope A4    #####################try to fix
+NOTE_MIN = 38       # D2 (for drop D tuning from E standard)
+NOTE_MAX = 91       # G6 (1 1/2 step bend on 24th fret of high e)
 FSAMP = 44100       # Sampling frequency in Hz
 FRAME_SIZE = 4096   # samples per frame
 FRAMES_PER_FFT = 16 # FFT takes average across how many frames?
