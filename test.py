@@ -16,7 +16,7 @@ line4 = ""
 line5 = ""
 line6 = ""
 
-def notes(note):
+def noteToTab(note):
     if(note == "E2"):
         line1 += "--"
         line2 += "--"
@@ -442,7 +442,5 @@ while time.time() < t_end:     ##make program end
 
     if num_frames >= FRAMES_PER_FFT:
         print("freq: {:7.2f} Hz     note: {:>3s} {:+.2f}".format(freq, note_name(noteNumWhole), noteNum-noteNumWhole))
-        notes(note_name(noteNumWhole))
-        #letter += note_name(noteNumWhole)
-        #letter += " "
-notes("exit")
+        noteToTab(note_name(noteNumWhole))
+noteToTab("exit")
