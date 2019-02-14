@@ -3,19 +3,20 @@ import numpy as np
 import pyaudio
 import time
 
+global line1
+global line2
+global line3
+global line4
+global line5
+global line6
+line1 = ""
+line2 = ""
+line3 = ""
+line4 = ""
+line5 = ""
+line6 = ""
+
 def firstnote(note):
-    global line1
-    global line2
-    global line3
-    global line4
-    global line5
-    global line6
-    line1 = ""
-    line2 = ""
-    line3 = ""
-    line4 = ""
-    line5 = ""
-    line6 = ""
     #note = raw_input("Enter note: ")
     if(note == "E2"):
         line1 += "e|--"
@@ -632,7 +633,7 @@ def notes(note):
 
 
 
-firstnote("A3")
+#firstnote("A3")
 
 letter = ""
 
@@ -651,7 +652,7 @@ SAMPLES_PER_FFT = FRAME_SIZE*FRAMES_PER_FFT
 FREQ_STEP = float(FSAMP)/SAMPLES_PER_FFT
 
 
-NOTE_NAMES = 'C C# D D# E F F# G G# A A# B'.split()
+NOTE_NAMES = "C C# D D# E F F# G G# A A# B".split()
 
 ######################################################################
 # functions based upon this webpage:
@@ -659,21 +660,17 @@ NOTE_NAMES = 'C C# D D# E F F# G G# A A# B'.split()
 
 def freq_to_number(f): return 69 + 12*np.log2(f/440.0)
 def number_to_freq(n): return 440 * 2.0**((n-100)/12.0)
-def note_name(n): return NOTE_NAMES[n % 12] + str(n/12 - 1)
+def note_name(n): return NOTE_NAMES[n % 12] + str(int(n/12) - 1)
 
 
 def note_to_fftbin(n): return number_to_freq(n)/FREQ_STEP
 imin = max(0, int(np.floor(note_to_fftbin(NOTE_MIN-1))))
 imax = min(SAMPLES_PER_FFT, int(np.ceil(note_to_fftbin(NOTE_MAX+1))))
 
-buf = np.zeros(SAMPLES_PER_FFT, dtype=np.float32)
+buf = np.zeros(SAMPLES_PER_FFT, np.dtype(np.float32))
 num_frames = 0
 
-stream = pyaudio.PyAudio().open(format=pyaudio.paInt16,
-                                channels=1,
-                                rate=FSAMP,
-                                input=True,
-                                frames_per_buffer=FRAME_SIZE)
+stream = pyaudio.PyAudio().open(format=pyaudio.paInt16, channels=1, rate=FSAMP, input=True, frames_per_buffer=FRAME_SIZE)
 
 stream.start_stream()
 
@@ -694,14 +691,14 @@ while time.time() < t_end:     ##make program end
 
     freq = (np.abs(fft[imin:imax]).argmax() + imin) * FREQ_STEP
 
-    n = freq_to_number(freq)
-    n0 = int(round(n))
+    noteNum = freq_to_number(freq)
+    noteNumWhole = int(round(noteNum))
 
     num_frames += 1
 
     if num_frames >= FRAMES_PER_FFT:
-        print("freq: {:7.2f} Hz     note: {:>3s} {:+.2f}".format(freq, note_name(n0), n-n0))
-        notes(note_name(n0))
-        letter += note_name(n0)
+        print("freq: {:7.2f} Hz     note: {:>3s} {:+.2f}".format(freq, note_name(noteNumWhole), noteNum-noteNumWhole))
+        notes(note_name(noteNumWhole))
+        letter += note_name(noteNumWhole)
         letter += " "
 notes("exit")
