@@ -3,12 +3,6 @@ import numpy as np
 import pyaudio
 import time
 
-#global eString
-#global BString
-#global GString
-#global DString
-#global AString
-#global EString
 eString = ""
 BString = ""
 GString = ""
@@ -17,7 +11,7 @@ AString = ""
 EString = ""
 
 # Takes a string - note, and checks if it is one of the possible notes listed. If it is, it adds the tab version to the corresponding line for
-# each string. If "exit" is passed to it, it outputs the tab to the console and writes it to a file
+# each string.
 # Parameters: string - note
 # Returns: Nothing
 def noteToTab(note):
