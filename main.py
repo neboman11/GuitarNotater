@@ -10,9 +10,8 @@ DString = ""
 AString = ""
 EString = ""
 
-# Takes a string - note, and checks if it is one of the possible notes listed. If it is, it adds the tab version to the corresponding line for
-# each string.
-# Parameters: string - note
+# Takes a int - note, and adds the tab version to the corresponding line for each string.
+# Parameters: int - note
 # Returns: Nothing
 def noteToTab(note):
     global eString
@@ -21,364 +20,70 @@ def noteToTab(note):
     global DString
     global AString
     global EString
-    if(note == "E2"):
+    if(note < 45):
         eString += "--"
         BString += "--"
         GString += "--"
         DString += "--"
         AString += "--"
-        EString += "0-"
-    if(note == "F2"):
+        EString += str(note - 40) + "-"
+    if(note > 44 and note < 50):
         eString += "--"
         BString += "--"
         GString += "--"
         DString += "--"
-        AString += "--"
-        EString += "1-"
-    if(note == "F#2"):
+        AString += str(note - 45) + "-"
+        EString += "--"
+    if(note > 49 and note < 55):
         eString += "--"
         BString += "--"
         GString += "--"
-        DString += "--"
+        DString += str(note - 50) + "-"
         AString += "--"
-        EString += "2-"
-    if(note == "G2"):
+        EString += "--"
+    if(note > 54 and note < 59):
         eString += "--"
         BString += "--"
-        GString += "--"
+        GString += str(note - 55) + "-"
         DString += "--"
         AString += "--"
-        EString += "3-"
-    if(note == "G#2"):
+        EString += "--"
+    if(note > 58 and note < 64):
         eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "4-"
-    if(note == "A2"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "0-"
-        EString += "--"
-    if(note == "A#2"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "1-"
-        EString += "--"
-    if(note == "B2"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "2-"
-        EString += "--"
-    if(note == "C3"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "3-"
-        EString += "--"
-    if(note == "C#3"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "4-"
-        EString += "--"
-    if(note == "D3"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "0-"
-        AString += "--"
-        EString += "--"
-    if(note == "D#3"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "1-"
-        AString += "--"
-        EString += "--"
-    if(note == "E3"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "2-"
-        AString += "--"
-        EString += "--"
-    if(note == "F3"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "3-"
-        AString += "--"
-        EString += "--"
-    if(note == "F#3"):
-        eString += "--"
-        BString += "--"
-        GString += "--"
-        DString += "4-"
-        AString += "--"
-        EString += "--"
-    if(note == "G3"):
-        eString += "--"
-        BString += "--"
-        GString += "0-"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "G#3"):
-        eString += "--"
-        BString += "--"
-        GString += "1-"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "A3"):
-        eString += "--"
-        BString += "--"
-        GString += "2-"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "A#3"):
-        eString += "--"
-        BString += "--"
-        GString += "3-"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "B3"):
-        eString += "--"
-        BString += "0-"
+        BString += str(note - 55) + "-"
         GString += "--"
         DString += "--"
         AString += "--"
         EString += "--"
-    if(note == "C4"):
-        eString += "--"
-        BString += "1-"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "C#4"):
-        eString += "--"
-        BString += "2-"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "D4"):
-        eString += "--"
-        BString += "3-"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "D#4"):
-        eString += "--"
-        BString += "4-"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "E4"):
-        eString += "0-"
+    if(note > 63 and note < 73):
+        eString += str(note - 64) + "-"
         BString += "--"
         GString += "--"
         DString += "--"
         AString += "--"
         EString += "--"
-    if(note == "F4"):
-        eString += "1-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "F#4"):
-        eString += "2-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "G4"):
-        eString += "3-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "G#4"):
-        eString += "4-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "A4"):
-        eString += "5-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "A#4"):
-        eString += "6-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "B4"):
-        eString += "7-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "C5"):
-        eString += "8-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "C#5"):
-        eString += "9-"
-        BString += "--"
-        GString += "--"
-        DString += "--"
-        AString += "--"
-        EString += "--"
-    if(note == "D5"):
-        eString += "10-"
+    if(note > 72 and note < 88):
+        eString += str(note - 73) + "-"
         BString += "---"
         GString += "---"
         DString += "---"
         AString += "---"
         EString += "---"
-    if(note == "D#5"):
-        eString += "11-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "E5"):
-        eString += "12-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "F5"):
-        eString += "13-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "F#5"):
-        eString += "14-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "G5"):
-        eString += "15-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "G#5"):
-        eString += "16-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "A5"):
-        eString += "17-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "A#5"):
-        eString += "18-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "B6"):
-        eString += "19-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "C6"):
-        eString += "20-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "C#6"):
-        eString += "21-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "D6"):
-        eString += "22-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "D#6"):
-        eString += "23-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "E6"):
-        eString += "24-"
-        BString += "---"
-        GString += "---"
-        DString += "---"
-        AString += "---"
-        EString += "---"
-    if(note == "F6"):
+    if(note == 89):
         eString += "24b25-"
         BString += "------"
         GString += "------"
         DString += "------"
         AString += "------"
         EString += "------"
-    if(note == "F#6"):
+    if(note == 90):
         eString += "24b26-"
         BString += "------"
         GString += "------"
         DString += "------"
         AString += "------"
         EString += "------"
-    if(note == "G6"):
+    if(note == 91):
         eString += "24b27-"
         BString += "------"
         GString += "------"
@@ -418,7 +123,7 @@ NOTE_MAX = 91                       # G6 (highest note with a bend in E standard
 FSAMP = 44100                       # Sampling frequency in Hz
 FRAME_SIZE = 4096                   # samples per frame
 FRAMES_PER_FFT = 16                 # FFT takes average across how many frames?
-loopTimer = 30                      # set the time to loop for in seconds
+loopTimer = time.time() + 3         # set the time to loop for in seconds
 
 SAMPLES_PER_FFT = FRAME_SIZE*FRAMES_PER_FFT
 FREQ_STEP = float(FSAMP)/SAMPLES_PER_FFT
@@ -450,7 +155,7 @@ print("sampling at", FSAMP, "Hz with max resolution of", FREQ_STEP, "Hz")
 print("\n")
 
 # Read audio input, calculate note letter and octave, and add it to the tab
-while time.time() < time.time() + loopTimer:
+while time.time() < loopTimer:
     buf[:-FRAME_SIZE] = buf[FRAME_SIZE:]
     buf[-FRAME_SIZE:] = np.fromstring(stream.read(FRAME_SIZE), np.int16)
 
@@ -464,7 +169,7 @@ while time.time() < time.time() + loopTimer:
     num_frames += 1
 
     if num_frames >= FRAMES_PER_FFT:
-        print("freq: {:7.2f} Hz     note: {:>3s} {:+.2f}".format(freq, note_name(noteNumWhole), noteNum-noteNumWhole))
-        noteToTab(note_name(noteNumWhole))
+        print("freq: {:7.2f} Hz     note: {:>3s} {:+.2f} MIDI {:}".format(freq, note_name(noteNumWhole), noteNum-noteNumWhole, noteNumWhole))
+        noteToTab(noteNumWhole)
 
 outputTab()
